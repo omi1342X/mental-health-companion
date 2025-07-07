@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Companion - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Mindful Companion</div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="mood.html"><i class="fas fa-smile"></i> Mood</a>
+        </li>
+        <li>
+          <a href="journal.html"><i class="fas fa-book"></i> Journal</a>
+        </li>
+        <li>
+          <a href="meditation.html"><i class="fas fa-spa"></i> Meditation</a>
+        </li>
+        <li>
+          <a href="resources.html"
+            ><i class="fas fa-info-circle"></i> Resources</a
+          >
+        </li>
+        <li>
+          <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </li>
+      </ul>
+      <div class="auth-buttons">
+        <button id="login-btn">Login</button>
+        <button id="signup-btn">Sign Up</button>
+      </div>
+      <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
+
+    <header class="dashboard-header">
+      <h1>Welcome back, <span id="username">User</span></h1>
+      <p>How would you like to feel better today?</p>
+    </header>
+
+    <main class="dashboard-container">
+      <section class="quick-actions">
+        <div class="action-card" onclick="location.href='mood.html'">
+          <i class="fas fa-smile"></i>
+          <h3>Log Your Mood</h3>
+          <p>Track how you're feeling today</p>
+        </div>
+        <div class="action-card" onclick="location.href='journal.html'">
+          <i class="fas fa-book"></i>
+          <h3>Daily Journal</h3>
+          <p>Reflect on your thoughts</p>
+        </div>
+        <div class="action-card" onclick="location.href='meditation.html'">
+          <i class="fas fa-spa"></i>
+          <h3>Quick Meditation</h3>
+          <p>5-minute breathing exercise</p>
+        </div>
+      </section>
+
+      <section class="dashboard-stats">
+        <div class="stat-card">
+          <h3>Current Streak</h3>
+          <p class="stat-value">7 days</p>
+          <p class="stat-label">Keep it going!</p>
+        </div>
+        <div class="stat-card">
+          <h3>Weekly Mood</h3>
+          <p class="stat-value">4.2/5</p>
+          <div class="mood-trend">↑ 0.5 from last week</div>
+        </div>
+        <div class="stat-card">
+          <h3>Activities Completed</h3>
+          <p class="stat-value">12</p>
+          <p class="stat-label">This month</p>
+        </div>
+      </section>
+
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <i class="fas fa-smile activity-icon"></i>
+            <div class="activity-details">
+              <p>Logged your mood as "Good"</p>
+              <small>Today at 9:30 AM</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-spa activity-icon"></i>
+            <div class="activity-details">
+              <p>Completed 5-minute meditation</p>
+              <small>Yesterday at 7:15 PM</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-book activity-icon"></i>
+            <div class="activity-details">
+              <p>Wrote a journal entry</p>
+              <small>Yesterday at 6:45 PM</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="motivational-quote">
+        <blockquote>
+          "You don't have to control your thoughts. You just have to stop
+          letting them control you."
+          <footer>- Dan Millman</footer>
+        </blockquote>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mindful Companion</h3>
+          <p>Your personal mental health assistant</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="resources.html#crisis">Crisis Help</a></li>
+            <li><a href="resources.html#therapists">Find Therapists</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Mindful Companion. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+          <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create Account</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" required />
+          </div>
+          <button type="submit" class="btn-primary">Create Account</button>
+          <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

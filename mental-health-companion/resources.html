@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | Mindful Companion</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/resources.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Same navbar as index.html -->
+
+    <main class="resources-container">
+      <section class="resources-hero">
+        <h1>Mental Health Resources</h1>
+        <p>Find help, information, and support for your mental wellbeing</p>
+      </section>
+
+      <section class="crisis-help" id="crisis">
+        <h2>Immediate Help</h2>
+        <p class="subtitle">If you're in crisis or need urgent support</p>
+
+        <div class="crisis-cards">
+          <div class="crisis-card emergency">
+            <div class="crisis-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Emergency Contacts</h3>
+            <ul class="crisis-list">
+              <li>
+                <strong>National Suicide Prevention Lifeline</strong>
+                <p>988 (US)</p>
+                <a href="tel:988" class="btn-call">Call Now</a>
+              </li>
+              <li>
+                <strong>Crisis Text Line</strong>
+                <p>Text HOME to 741741 (US)</p>
+                <a href="sms:741741&body=HOME" class="btn-text">Text Now</a>
+              </li>
+              <li>
+                <strong>Emergency Services</strong>
+                <p>911 (US) or 112 (EU)</p>
+                <a href="tel:911" class="btn-call">Call Now</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="crisis-card international">
+            <div class="crisis-icon">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h3>International Hotlines</h3>
+            <ul class="crisis-list">
+              <li>
+                <strong>Canada</strong>
+                <p>1-833-456-4566</p>
+              </li>
+              <li>
+                <strong>UK</strong>
+                <p>116 123 (Samaritans)</p>
+              </li>
+              <li>
+                <strong>Australia</strong>
+                <p>13 11 14</p>
+              </li>
+              <li>
+                <strong>Worldwide Directory</strong>
+                <a
+                  href="https://www.befrienders.org"
+                  target="_blank"
+                  class="btn-link"
+                  >View All</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="therapist-finder" id="therapists">
+        <h2>Find Professional Help</h2>
+        <p class="subtitle">
+          Connect with licensed mental health professionals
+        </p>
+
+        <div class="therapist-search">
+          <div class="search-filters">
+            <div class="filter-group">
+              <label for="therapy-type">Type of Therapy</label>
+              <select id="therapy-type">
+                <option value="">Any</option>
+                <option value="cognitive">Cognitive Behavioral</option>
+                <option value="psychodynamic">Psychodynamic</option>
+                <option value="humanistic">Humanistic</option>
+                <option value="dbt">Dialectical Behavior</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="specialty">Specialty</label>
+              <select id="specialty">
+                <option value="">Any</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="depression">Depression</option>
+                <option value="trauma">Trauma</option>
+                <option value="relationships">Relationships</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="City or ZIP" />
+            </div>
+
+            <div class="filter-group">
+              <label for="insurance">Insurance</label>
+              <select id="insurance">
+                <option value="">Any</option>
+                <option value="aetna">Aetna</option>
+                <option value="bluecross">Blue Cross</option>
+                <option value="medicare">Medicare</option>
+              </select>
+            </div>
+
+            <button id="search-therapists" class="btn-primary">Search</button>
+          </div>
+
+          <div class="search-results">
+            <div class="therapist-card">
+              <div class="therapist-photo">
+                <img src="assets/therapist1.jpg" alt="Dr. Sarah Johnson" />
+              </div>
+              <div class="therapist-info">
+                <h3>Dr. Sarah Johnson, PhD</h3>
+                <p class="specialty">
+                  Clinical Psychologist • Anxiety, Depression
+                </p>
+                <p class="location">
+                  <i class="fas fa-map-marker-alt"></i> Chicago, IL & Online
+                </p>
+                <div class="therapist-badges">
+                  <span class="badge">CBT</span>
+                  <span class="badge">Trauma-Informed</span>
+                  <span class="badge">LGBTQ+</span>
+                </div>
+                <p class="bio">
+                  Specializing in cognitive behavioral therapy with 12 years of
+                  experience helping clients with anxiety disorders.
+                </p>
+                <div class="therapist-actions">
+                  <button class="btn-view-profile">View Profile</button>
+                  <button class="btn-book">Book Session</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="therapist-card">
+              <div class="therapist-photo">
+                <img src="assets/therapist2.jpg" alt="Michael Chen" />
+              </div>
+              <div class="therapist-info">
+                <h3>Michael Chen, LCSW</h3>
+                <p class="specialty">
+                  Licensed Clinical Social Worker • Men's Issues, Relationships
+                </p>
+                <p class="location">
+                  <i class="fas fa-map-marker-alt"></i> New York, NY & Online
+                </p>
+                <div class="therapist-badges">
+                  <span class="badge">DBT</span>
+                  <span class="badge">Mindfulness</span>
+                </div>
+                <p class="bio">
+                  Focuses on helping men navigate emotional challenges and
+                  improve relationships through evidence-based approaches.
+                </p>
+                <div class="therapist-actions">
+                  <button class="btn-view-profile">View Profile</button>
+                  <button class="btn-book">Book Session</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <button class="page-btn" disabled>
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="self-help-resources">
+        <h2>Self-Help Resources</h2>
+
+        <div class="resource-tabs">
+          <button class="resource-tab active" data-tab="articles">
+            Articles
+          </button>
+          <button class="resource-tab" data-tab="books">Books</button>
+          <button class="resource-tab" data-tab="podcasts">Podcasts</button>
+          <button class="resource-tab" data-tab="apps">Apps</button>
+        </div>
+
+        <div class="resource-content">
+          <div id="articles" class="resource-tab-content active">
+            <div class="article-card">
+              <h3>Understanding Anxiety Disorders</h3>
+              <p class="source">American Psychological Association</p>
+              <p class="excerpt">
+                Learn about the different types of anxiety disorders, their
+                symptoms, and evidence-based treatments...
+              </p>
+              <a href="#" class="btn-read">Read Article</a>
+            </div>
+
+            <div class="article-card">
+              <h3>10 Science-Backed Ways to Improve Your Mental Health</h3>
+              <p class="source">Harvard Health Publishing</p>
+              <p class="excerpt">
+                Simple daily practices that can have a significant impact on
+                your emotional wellbeing...
+              </p>
+              <a href="#" class="btn-read">Read Article</a>
+            </div>
+
+            <div class="article-card">
+              <h3>The Connection Between Sleep and Mental Health</h3>
+              <p class="source">National Sleep Foundation</p>
+              <p class="excerpt">
+                How sleep affects your mood and what you can do to improve
+                both...
+              </p>
+              <a href="#" class="btn-read">Read Article</a>
+            </div>
+          </div>
+
+          <div id="books" class="resource-tab-content">
+            <div class="book-card">
+              <div class="book-cover">
+                <img src="assets/book1.jpg" alt="The Body Keeps the Score" />
+              </div>
+              <div class="book-info">
+                <h3>The Body Keeps the Score</h3>
+                <p class="author">Bessel van der Kolk</p>
+                <p class="description">
+                  Explores how trauma affects the body and mind, and innovative
+                  treatments for recovery.
+                </p>
+                <div class="book-actions">
+                  <a href="#" class="btn-buy">Buy</a>
+                  <a href="#" class="btn-preview">Preview</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-card">
+              <div class="book-cover">
+                <img src="assets/book2.jpg" alt="Feeling Good" />
+              </div>
+              <div class="book-info">
+                <h3>Feeling Good: The New Mood Therapy</h3>
+                <p class="author">David D. Burns</p>
+                <p class="description">
+                  Cognitive behavioral techniques to overcome depression and
+                  improve your mood.
+                </p>
+                <div class="book-actions">
+                  <a href="#" class="btn-buy">Buy</a>
+                  <a href="#" class="btn-preview">Preview</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="book-card">
+              <div class="book-cover">
+                <img src="assets/book3.jpg" alt="The Happiness Trap" />
+              </div>
+              <div class="book-info">
+                <h3>The Happiness Trap</h3>
+                <p class="author">Russ Harris</p>
+                <p class="description">
+                  How to stop struggling and start living with Acceptance and
+                  Commitment Therapy (ACT).
+                </p>
+                <div class="book-actions">
+                  <a href="#" class="btn-buy">Buy</a>
+                  <a href="#" class="btn-preview">Preview</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="podcasts" class="resource-tab-content">
+            <div class="podcast-card">
+              <div class="podcast-art">
+                <img src="assets/podcast1.jpg" alt="The Happiness Lab" />
+              </div>
+              <div class="podcast-info">
+                <h3>The Happiness Lab</h3>
+                <p class="host">Dr. Laurie Santos</p>
+                <p class="description">
+                  Yale professor examines the science of happiness and how to
+                  apply it in your life.
+                </p>
+                <div class="podcast-links">
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-spotify"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fas fa-podcast"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-google"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="podcast-card">
+              <div class="podcast-art">
+                <img
+                  src="assets/podcast2.jpg"
+                  alt="The Mental Illness Happy Hour"
+                />
+              </div>
+              <div class="podcast-info">
+                <h3>The Mental Illness Happy Hour</h3>
+                <p class="host">Paul Gilmartin</p>
+                <p class="description">
+                  Honest conversations about mental health, trauma, and
+                  recovery.
+                </p>
+                <div class="podcast-links">
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-spotify"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fas fa-podcast"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-google"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="podcast-card">
+              <div class="podcast-art">
+                <img src="assets/podcast3.jpg" alt="Ten Percent Happier" />
+              </div>
+              <div class="podcast-info">
+                <h3>Ten Percent Happier</h3>
+                <p class="host">Dan Harris</p>
+                <p class="description">
+                  Practical meditation and mindfulness advice from top experts.
+                </p>
+                <div class="podcast-links">
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-spotify"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fas fa-podcast"></i
+                  ></a>
+                  <a href="#" class="podcast-platform"
+                    ><i class="fab fa-google"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="apps" class="resource-tab-content">
+            <div class="app-card">
+              <div class="app-icon">
+                <img src="assets/app1.jpg" alt="Headspace" />
+              </div>
+              <div class="app-info">
+                <h3>Headspace</h3>
+                <p class="category">Meditation & Mindfulness</p>
+                <div class="app-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>4.8 (500K+)</span>
+                </div>
+                <p class="description">
+                  Guided meditations for stress, sleep, focus, and more.
+                </p>
+                <div class="app-links">
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-apple"></i> App Store</a
+                  >
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-google-play"></i> Play Store</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon">
+                <img src="assets/app2.jpg" alt="CBT Thought Diary" />
+              </div>
+              <div class="app-info">
+                <h3>CBT Thought Diary</h3>
+                <p class="category">Cognitive Behavioral Therapy</p>
+                <div class="app-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>4.3 (50K+)</span>
+                </div>
+                <p class="description">
+                  Track negative thoughts and reframe them using CBT techniques.
+                </p>
+                <div class="app-links">
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-apple"></i> App Store</a
+                  >
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-google-play"></i> Play Store</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="app-card">
+              <div class="app-icon">
+                <img src="assets/app3.jpg" alt="Daylio" />
+              </div>
+              <div class="app-info">
+                <h3>Daylio</h3>
+                <p class="category">Mood Tracking</p>
+                <div class="app-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>4.9 (1M+)</span>
+                </div>
+                <p class="description">
+                  Track your mood and activities to identify patterns and
+                  triggers.
+                </p>
+                <div class="app-links">
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-apple"></i> App Store</a
+                  >
+                  <a href="#" class="btn-download"
+                    ><i class="fab fa-google-play"></i> Play Store</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-communities">
+        <h2>Support Communities</h2>
+        <p class="subtitle">
+          Connect with others who understand what you're going through
+        </p>
+
+        <div class="community-cards">
+          <div class="community-card">
+            <div class="community-logo">
+              <img src="assets/community1.png" alt="7 Cups" />
+            </div>
+            <div class="community-info">
+              <h3>7 Cups</h3>
+              <p class="description">
+                Free anonymous chat with trained listeners and support
+                communities.
+              </p>
+              <a href="#" class="btn-visit">Visit Site</a>
+            </div>
+          </div>
+
+          <div class="community-card">
+            <div class="community-logo">
+              <img src="assets/community2.png" alt="The Mighty" />
+            </div>
+            <div class="community-info">
+              <h3>The Mighty</h3>
+              <p class="description">
+                Share your story and connect with others facing similar
+                challenges.
+              </p>
+              <a href="#" class="btn-visit">Visit Site</a>
+            </div>
+          </div>
+
+          <div class="community-card">
+            <div class="community-logo">
+              <img src="assets/community3.png" alt="NAMI Connection" />
+            </div>
+            <div class="community-info">
+              <h3>NAMI Connection</h3>
+              <p class="description">
+                Free recovery support groups for people with mental health
+                conditions.
+              </p>
+              <a href="#" class="btn-visit">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+  </body>
+</html>
