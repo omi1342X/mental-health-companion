@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Tracking | Mindful Companion</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mood.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Same navbar as index.html -->
+
+    <main class="mood-container">
+      <section class="mood-tracker">
+        <h1>How are you feeling today?</h1>
+        <div class="mood-options">
+          <div class="mood-option" data-mood="5">
+            <div class="mood-icon">😊</div>
+            <p>Great</p>
+          </div>
+          <div class="mood-option" data-mood="4">
+            <div class="mood-icon">🙂</div>
+            <p>Good</p>
+          </div>
+          <div class="mood-option" data-mood="3">
+            <div class="mood-icon">😐</div>
+            <p>Okay</p>
+          </div>
+          <div class="mood-option" data-mood="2">
+            <div class="mood-icon">😕</div>
+            <p>Down</p>
+          </div>
+          <div class="mood-option" data-mood="1">
+            <div class="mood-icon">😞</div>
+            <p>Struggling</p>
+          </div>
+        </div>
+
+        <div class="mood-tags">
+          <h3>What's contributing to your mood?</h3>
+          <div class="tags-container">
+            <span class="mood-tag" data-tag="work">Work</span>
+            <span class="mood-tag" data-tag="family">Family</span>
+            <span class="mood-tag" data-tag="friends">Friends</span>
+            <span class="mood-tag" data-tag="health">Health</span>
+            <span class="mood-tag" data-tag="sleep">Sleep</span>
+            <span class="mood-tag" data-tag="weather">Weather</span>
+            <span class="mood-tag" data-tag="news">News</span>
+            <span class="mood-tag" data-tag="other">Other</span>
+          </div>
+        </div>
+
+        <div class="mood-note">
+          <h3>Add a note (optional)</h3>
+          <textarea
+            id="mood-note"
+            placeholder="Anything you'd like to add about how you're feeling..."
+          ></textarea>
+        </div>
+
+        <button id="save-mood" class="btn-primary">Save Mood</button>
+
+        <div id="mood-response" class="mood-response">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <section class="mood-history">
+        <h2>Your Mood History</h2>
+        <div class="time-filters">
+          <button class="time-filter active" data-range="7">Last 7 Days</button>
+          <button class="time-filter" data-range="30">Last 30 Days</button>
+          <button class="time-filter" data-range="90">Last 3 Months</button>
+          <button class="time-filter" data-range="365">Last Year</button>
+        </div>
+
+        <div class="mood-chart-container">
+          <canvas id="moodChart"></canvas>
+        </div>
+
+        <div class="mood-insights">
+          <h3>Mood Insights</h3>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <h4>Average Mood</h4>
+              <p class="insight-value">4.2</p>
+              <p class="insight-change positive">+0.3 from last week</p>
+            </div>
+            <div class="insight-card">
+              <h4>Best Day</h4>
+              <p class="insight-value">Friday</p>
+              <p class="insight-detail">Average 4.5</p>
+            </div>
+            <div class="insight-card">
+              <h4>Common Factors</h4>
+              <p class="insight-value">Work, Sleep</p>
+              <p class="insight-detail">Appear in 65% of entries</p>
+            </div>
+            <div class="insight-card">
+              <h4>Consistency</h4>
+              <p class="insight-value">Moderate</p>
+              <p class="insight-detail">
+                Your mood varies by 1.2 points on average
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mood-patterns">
+        <h2>Mood Patterns</h2>
+        <div class="patterns-container">
+          <div class="pattern-card">
+            <h3>Weekly Pattern</h3>
+            <canvas id="weeklyPatternChart"></canvas>
+            <p>Your mood tends to improve toward the weekend</p>
+          </div>
+          <div class="pattern-card">
+            <h3>Time of Day</h3>
+            <canvas id="timePatternChart"></canvas>
+            <p>You report better moods in the evenings</p>
+          </div>
+          <div class="pattern-card">
+            <h3>Factors Correlation</h3>
+            <canvas id="factorsChart"></canvas>
+            <p>Sleep quality strongly affects your mood</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/mood.js"></script>
+  </body>
+</html>

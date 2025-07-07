@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile | Mindful Companion</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Same navbar as index.html -->
+
+    <main class="profile-container">
+      <section class="profile-header">
+        <div class="profile-photo">
+          <img
+            src="assets/user-avatar.jpg"
+            alt="Profile Photo"
+            id="user-avatar"
+          />
+          <button id="change-avatar" class="btn-edit">
+            <i class="fas fa-camera"></i>
+          </button>
+        </div>
+        <div class="profile-info">
+          <h1 id="user-name">Alex Johnson</h1>
+          <p class="user-email" id="user-email">alex.johnson@example.com</p>
+          <p class="member-since">Member since October 2022</p>
+          <button id="edit-profile" class="btn-primary">
+            <i class="fas fa-edit"></i> Edit Profile
+          </button>
+        </div>
+      </section>
+
+      <section class="profile-stats">
+        <h2>Your Wellness Stats</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Current Streak</h3>
+              <p class="stat-value">12 days</p>
+              <p class="stat-description">Daily check-ins</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Average Mood</h3>
+              <p class="stat-value">4.1/5</p>
+              <p class="stat-description">Last 30 days</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Meditation Hours</h3>
+              <p class="stat-value">14.5</p>
+              <p class="stat-description">Total practice</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Journal Entries</h3>
+              <p class="stat-value">47</p>
+              <p class="stat-description">Words written: 12,845</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-goals">
+        <h2>Your Wellness Goals</h2>
+
+        <div class="goals-container">
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fas fa-bed"></i>
+            </div>
+            <div class="goal-info">
+              <h3>Sleep Quality</h3>
+              <div class="goal-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 65%"></div>
+                </div>
+                <span class="progress-text">65% complete</span>
+              </div>
+              <p class="goal-description">
+                7+ hours of sleep for 5 nights/week
+              </p>
+            </div>
+            <button class="btn-edit-goal">
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="goal-info">
+              <h3>Mindfulness Practice</h3>
+              <div class="goal-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%"></div>
+                </div>
+                <span class="progress-text">40% complete</span>
+              </div>
+              <p class="goal-description">Meditate for 10 minutes daily</p>
+            </div>
+            <button class="btn-edit-goal">
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="goal-info">
+              <h3>Physical Activity</h3>
+              <div class="goal-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 30%"></div>
+                </div>
+                <span class="progress-text">30% complete</span>
+              </div>
+              <p class="goal-description">30 minutes of exercise, 4x/week</p>
+            </div>
+            <button class="btn-edit-goal">
+              <i class="fas fa-edit"></i>
+            </button>
+          </div>
+
+          <button id="add-goal" class="btn-add-goal">
+            <i class="fas fa-plus"></i> Add New Goal
+          </button>
+        </div>
+      </section>
+
+      <section class="profile-achievements">
+        <h2>Your Achievements</h2>
+
+        <div class="achievements-container">
+          <div class="achievement-card earned">
+            <div class="achievement-badge">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>Consistency Champion</h3>
+              <p class="achievement-description">
+                Logged your mood for 7 consecutive days
+              </p>
+              <p class="achievement-date">Earned on Oct 12, 2023</p>
+            </div>
+          </div>
+
+          <div class="achievement-card earned">
+            <div class="achievement-badge">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>Mindfulness Beginner</h3>
+              <p class="achievement-description">
+                Completed your first 5 meditation sessions
+              </p>
+              <p class="achievement-date">Earned on Sep 28, 2023</p>
+            </div>
+          </div>
+
+          <div class="achievement-card locked">
+            <div class="achievement-badge">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>Journaling Pro</h3>
+              <p class="achievement-description">Write 50 journal entries</p>
+              <p class="achievement-progress">47/50 entries</p>
+            </div>
+          </div>
+
+          <div class="achievement-card locked">
+            <div class="achievement-badge">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="achievement-info">
+              <h3>Mood Master</h3>
+              <p class="achievement-description">
+                Maintain 4.0+ average mood for a month
+              </p>
+              <p class="achievement-progress">Current average: 4.1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-history">
+        <h2>Your Wellness Journey</h2>
+
+        <div class="history-tabs">
+          <button class="history-tab active" data-tab="mood-history">
+            Mood
+          </button>
+          <button class="history-tab" data-tab="meditation-history">
+            Meditation
+          </button>
+          <button class="history-tab" data-tab="journal-history">
+            Journal
+          </button>
+          <button class="history-tab" data-tab="activity-history">
+            Activity
+          </button>
+        </div>
+
+        <div class="history-content">
+          <div id="mood-history" class="history-tab-content active">
+            <div class="history-chart">
+              <canvas id="moodHistoryChart"></canvas>
+            </div>
+            <div class="history-insights">
+              <h3>Mood Insights</h3>
+              <p>
+                Your mood has improved by <strong>12%</strong> over the last
+                month compared to the previous period.
+              </p>
+              <p>
+                Your best days are typically <strong>Fridays</strong>, with an
+                average mood of <strong>4.5/5</strong>.
+              </p>
+              <p>
+                Activities that correlate with better moods:
+                <strong>exercise, socializing, adequate sleep</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div id="meditation-history" class="history-tab-content">
+            <div class="history-chart">
+              <canvas id="meditationHistoryChart"></canvas>
+            </div>
+            <div class="history-insights">
+              <h3>Meditation Insights</h3>
+              <p>
+                You've meditated for <strong>14.5 hours</strong> total since
+                joining.
+              </p>
+              <p>
+                Your preferred time for meditation is
+                <strong>evenings</strong> (between 6-9 PM).
+              </p>
+              <p>Your average session length is <strong>12 minutes</strong>.</p>
+            </div>
+          </div>
+
+          <div id="journal-history" class="history-tab-content">
+            <div class="history-chart">
+              <canvas id="journalHistoryChart"></canvas>
+            </div>
+            <div class="history-insights">
+              <h3>Journal Insights</h3>
+              <p>
+                You've written <strong>47 entries</strong> totaling
+                <strong>12,845 words</strong>.
+              </p>
+              <p>
+                Your writing sentiment is <strong>72% positive</strong> on
+                average.
+              </p>
+              <p>
+                Common themes in your journal:
+                <strong>work, relationships, personal growth</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div id="activity-history" class="history-tab-content">
+            <div class="history-chart">
+              <canvas id="activityHistoryChart"></canvas>
+            </div>
+            <div class="history-insights">
+              <h3>Activity Insights</h3>
+              <p>
+                You've completed <strong>32 activities</strong> from your
+                self-care plan.
+              </p>
+              <p>
+                Your most frequent activities:
+                <strong
+                  >breathing exercises, gratitude journaling, walking</strong
+                >.
+              </p>
+              <p>
+                Activities that correlate with better moods:
+                <strong>yoga, time in nature, creative hobbies</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-settings">
+        <h2>Account Settings</h2>
+
+        <div class="settings-form">
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+              <label for="profile-name">Name</label>
+              <input type="text" id="profile-name" value="Alex Johnson" />
+            </div>
+            <div class="form-group">
+              <label for="profile-email">Email</label>
+              <input
+                type="email"
+                id="profile-email"
+                value="alex.johnson@example.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Notification Preferences</h3>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="notif-daily" checked />
+              <label for="notif-daily">Daily check-in reminders</label>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="notif-weekly" checked />
+              <label for="notif-weekly">Weekly insights and progress</label>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="notif-promo" />
+              <label for="notif-promo">Promotional offers and updates</label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Change Password</h3>
+            <div class="form-group">
+              <label for="current-password">Current Password</label>
+              <input type="password" id="current-password" />
+            </div>
+            <div class="form-group">
+              <label for="new-password">New Password</label>
+              <input type="password" id="new-password" />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm New Password</label>
+              <input type="password" id="confirm-password" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button id="save-settings" class="btn-primary">Save Changes</button>
+            <button id="cancel-settings" class="btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+
+    <!-- Avatar Upload Modal -->
+    <div id="avatar-modal" class="modal">
+      <div class="modal-content avatar-modal">
+        <span class="close-modal">&times;</span>
+        <h2>Change Profile Photo</h2>
+
+        <div class="avatar-options">
+          <div class="avatar-option">
+            <h3>Upload Photo</h3>
+            <div class="upload-area" id="upload-area">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop your photo here or click to browse</p>
+              <input type="file" id="avatar-upload" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="avatar-option">
+            <h3>Choose Avatar</h3>
+            <div class="avatar-grid">
+              <div class="avatar-select" data-avatar="1">
+                <img src="assets/avatars/avatar1.png" alt="Avatar 1" />
+              </div>
+              <div class="avatar-select" data-avatar="2">
+                <img src="assets/avatars/avatar2.png" alt="Avatar 2" />
+              </div>
+              <div class="avatar-select" data-avatar="3">
+                <img src="assets/avatars/avatar3.png" alt="Avatar 3" />
+              </div>
+              <div class="avatar-select" data-avatar="4">
+                <img src="assets/avatars/avatar4.png" alt="Avatar 4" />
+              </div>
+              <div class="avatar-select" data-avatar="5">
+                <img src="assets/avatars/avatar5.png" alt="Avatar 5" />
+              </div>
+              <div class="avatar-select" data-avatar="6">
+                <img src="assets/avatars/avatar6.png" alt="Avatar 6" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button id="save-avatar" class="btn-primary">Save Photo</button>
+          <button class="btn-secondary close-modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Goal Editor Modal -->
+    <div id="goal-modal" class="modal">
+      <div class="modal-content goal-modal">
+        <span class="close-modal">&times;</span>
+        <h2 id="goal-modal-title">Add New Goal</h2>
+
+        <div class="goal-form">
+          <div class="form-group">
+            <label for="goal-title">Goal Title</label>
+            <input
+              type="text"
+              id="goal-title"
+              placeholder="e.g., Improve Sleep Quality"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="goal-category">Category</label>
+            <select id="goal-category">
+              <option value="sleep">Sleep</option>
+              <option value="mindfulness">Mindfulness</option>
+              <option value="exercise">Exercise</option>
+              <option value="nutrition">Nutrition</option>
+              <option value="social">Social</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="goal-target">Target</label>
+            <div class="target-input">
+              <input type="number" id="goal-target" placeholder="e.g., 7" />
+              <select id="goal-unit">
+                <option value="hours">hours</option>
+                <option value="minutes">minutes</option>
+                <option value="days">days</option>
+                <option value="times">times</option>
+                <option value="sessions">sessions</option>
+              </select>
+              <select id="goal-frequency">
+                <option value="day">per day</option>
+                <option value="week">per week</option>
+                <option value="month">per month</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goal-start">Start Date</label>
+            <input type="date" id="goal-start" />
+          </div>
+
+          <div class="form-group">
+            <label for="goal-end">End Date (optional)</label>
+            <input type="date" id="goal-end" />
+          </div>
+
+          <div class="form-group">
+            <label for="goal-reminder">Reminder</label>
+            <select id="goal-reminder">
+              <option value="none">No reminder</option>
+              <option value="morning">Morning (8 AM)</option>
+              <option value="afternoon">Afternoon (2 PM)</option>
+              <option value="evening">Evening (8 PM)</option>
+              <option value="custom">Custom time</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button id="save-goal" class="btn-primary">Save Goal</button>
+            <button class="btn-secondary close-modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

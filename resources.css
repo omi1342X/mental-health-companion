@@ -1,0 +1,648 @@
+.resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.resources-hero {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border-radius: 10px;
+}
+
+.resources-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.resources-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Crisis Help Section */
+.crisis-help {
+  margin-bottom: 3rem;
+}
+
+.crisis-help h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.crisis-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.crisis-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crisis-card.emergency {
+  background-color: #ffebee;
+  border-left: 5px solid var(--danger);
+}
+
+.crisis-card.international {
+  background-color: #e3f2fd;
+  border-left: 5px solid var(--info);
+}
+
+.crisis-icon {
+  font-size: 2rem;
+  color: var(--danger);
+  margin-bottom: 1rem;
+}
+
+.crisis-card.international .crisis-icon {
+  color: var(--info);
+}
+
+.crisis-card h3 {
+  margin-bottom: 1rem;
+}
+
+.crisis-list {
+  list-style: none;
+}
+
+.crisis-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.crisis-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.crisis-list strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.crisis-list p {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.btn-call,
+.btn-text,
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.btn-call {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-text {
+  background-color: var(--info);
+  color: white;
+}
+
+.btn-link {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Therapist Finder */
+.therapist-finder {
+  margin-bottom: 3rem;
+}
+
+.therapist-search {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.search-filters {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-results {
+  flex: 1;
+}
+
+.therapist-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.therapist-photo {
+  width: 150px;
+  background-color: var(--gray-light);
+}
+
+.therapist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.therapist-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.therapist-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.specialty {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.location i {
+  margin-right: 0.5rem;
+}
+
+.therapist-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--gray-light);
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.bio {
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.therapist-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-view-profile,
+.btn-book {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.btn-view-profile {
+  background-color: var(--gray-light);
+  color: var(--dark);
+}
+
+.btn-book {
+  background-color: var(--primary);
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gray-light);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Self-Help Resources */
+.resource-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.resource-tab {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.resource-tab.active {
+  color: var(--primary);
+}
+
+.resource-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.resource-tab-content {
+  display: none;
+}
+
+.resource-tab-content.active {
+  display: block;
+}
+
+/* Articles */
+.article-card {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.article-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.source {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.excerpt {
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.btn-read {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* Books */
+.book-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.book-cover {
+  width: 120px;
+  background-color: var(--gray-light);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.book-info h3 {
+  margin-bottom: 0.3rem;
+}
+
+.author {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.description {
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-buy,
+.btn-preview {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.btn-buy {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-preview {
+  background-color: var(--gray-light);
+  color: var(--dark);
+}
+
+/* Podcasts */
+.podcast-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.podcast-art {
+  width: 120px;
+  background-color: var(--gray-light);
+}
+
+.podcast-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.podcast-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.podcast-info h3 {
+  margin-bottom: 0.3rem;
+}
+
+.host {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.podcast-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.podcast-platform {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gray-light);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Apps */
+.app-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.app-icon {
+  width: 120px;
+  background-color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.app-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.app-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.app-info h3 {
+  margin-bottom: 0.3rem;
+}
+
+.category {
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.app-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.app-rating i {
+  color: var(--warning);
+  margin-right: 0.3rem;
+}
+
+.app-rating span {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.description {
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.app-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-download {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-download i {
+  font-size: 1.2rem;
+}
+
+/* Support Communities */
+.community-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.community-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.community-logo {
+  width: 120px;
+  background-color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.community-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.community-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.community-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.community-info p {
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-visit {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.dark-mode .resources-hero {
+  background: linear-gradient(135deg, var(--primary-dark), #3a2db8);
+}
+
+.dark-mode .crisis-card.emergency {
+  background-color: #3d1e22;
+  border-left: 5px solid var(--danger);
+}
+
+.dark-mode .crisis-card.international {
+  background-color: #1a2e3d;
+  border-left: 5px solid var(--info);
+}
+
+.dark-mode .search-filters,
+.dark-mode .therapist-card,
+.dark-mode .article-card,
+.dark-mode .book-card,
+.dark-mode .podcast-card,
+.dark-mode .app-card,
+.dark-mode .community-card {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .badge {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .resource-tab {
+  color: #b0b0b0;
+}
+
+.dark-mode .resource-tab.active {
+  color: var(--primary-light);
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journal | Mindful Companion</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Same navbar as index.html -->
+
+    <main class="journal-container">
+      <section class="journal-section">
+        <h1>Daily Journal</h1>
+        <div class="journal-tabs">
+          <button class="journal-tab active" data-tab="freeform">
+            Free Writing
+          </button>
+          <button class="journal-tab" data-tab="prompted">Prompted</button>
+          <button class="journal-tab" data-tab="gratitude">Gratitude</button>
+        </div>
+
+        <div class="journal-content">
+          <!-- Freeform Journal -->
+          <div id="freeform" class="journal-tab-content active">
+            <div class="journal-date">
+              <h3 id="current-date">Today, October 15, 2023</h3>
+            </div>
+            <textarea
+              id="journal-entry"
+              placeholder="Write freely about your thoughts, feelings, and experiences..."
+            ></textarea>
+            <div class="journal-actions">
+              <button id="save-journal" class="btn-primary">Save Entry</button>
+              <button id="clear-journal" class="btn-secondary">Clear</button>
+            </div>
+          </div>
+
+          <!-- Prompted Journal -->
+          <div id="prompted" class="journal-tab-content">
+            <div class="journal-prompt">
+              <h3>Today's Prompt</h3>
+              <p id="current-prompt">
+                What's something you're proud of accomplishing recently, no
+                matter how small?
+              </p>
+              <button id="new-prompt" class="btn-secondary">
+                Get New Prompt
+              </button>
+            </div>
+            <textarea
+              id="prompted-entry"
+              placeholder="Write your response to the prompt..."
+            ></textarea>
+            <div class="journal-actions">
+              <button id="save-prompted" class="btn-primary">
+                Save Response
+              </button>
+            </div>
+          </div>
+
+          <!-- Gratitude Journal -->
+          <div id="gratitude" class="journal-tab-content">
+            <div class="gratitude-header">
+              <h3>Three Good Things</h3>
+              <p>List three things you're grateful for today</p>
+            </div>
+            <div class="gratitude-entries">
+              <div class="gratitude-item">
+                <span class="gratitude-number">1</span>
+                <input
+                  type="text"
+                  class="gratitude-input"
+                  placeholder="I'm grateful for..."
+                />
+              </div>
+              <div class="gratitude-item">
+                <span class="gratitude-number">2</span>
+                <input
+                  type="text"
+                  class="gratitude-input"
+                  placeholder="I'm grateful for..."
+                />
+              </div>
+              <div class="gratitude-item">
+                <span class="gratitude-number">3</span>
+                <input
+                  type="text"
+                  class="gratitude-input"
+                  placeholder="I'm grateful for..."
+                />
+              </div>
+            </div>
+            <div class="journal-actions">
+              <button id="save-gratitude" class="btn-primary">
+                Save Gratitude List
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journal-history">
+        <h2>Journal History</h2>
+        <div class="history-filters">
+          <select id="history-type">
+            <option value="all">All Entries</option>
+            <option value="freeform">Free Writing</option>
+            <option value="prompted">Prompted</option>
+            <option value="gratitude">Gratitude</option>
+          </select>
+          <select id="history-time">
+            <option value="7">Last 7 Days</option>
+            <option value="30">Last 30 Days</option>
+            <option value="90">Last 3 Months</option>
+            <option value="365">Last Year</option>
+            <option value="all">All Time</option>
+          </select>
+        </div>
+
+        <div class="entries-container">
+          <!-- Will be populated by JavaScript -->
+          <div class="journal-entry-card">
+            <div class="entry-header">
+              <h3>October 14, 2023</h3>
+              <span class="entry-type freeform">Free Writing</span>
+            </div>
+            <div class="entry-preview">
+              <p>
+                Today was a productive day. I finished the project I've been
+                working on and got positive feedback from my manager...
+              </p>
+            </div>
+            <div class="entry-actions">
+              <button class="btn-view">View Full Entry</button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+
+          <div class="journal-entry-card">
+            <div class="entry-header">
+              <h3>October 13, 2023</h3>
+              <span class="entry-type gratitude">Gratitude</span>
+            </div>
+            <div class="entry-preview">
+              <ul>
+                <li>1. I'm grateful for my morning coffee</li>
+                <li>2. I'm grateful for my friend who checked in on me</li>
+                <li>3. I'm grateful for the sunny weather</li>
+              </ul>
+            </div>
+            <div class="entry-actions">
+              <button class="btn-view">View Full Entry</button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sentiment-analysis">
+          <h3>Journal Sentiment Trends</h3>
+          <div class="sentiment-chart-container">
+            <canvas id="sentimentChart"></canvas>
+          </div>
+          <div class="sentiment-insights">
+            <p>
+              Your writing has been <strong>75% positive</strong> over the last
+              month, which is <strong>10% higher</strong> than the previous
+              period.
+            </p>
+            <p>Common positive words: happy, proud, excited, grateful</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+
+    <!-- Entry Modal -->
+    <div id="entry-modal" class="modal">
+      <div class="modal-content journal-modal">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-entry-date">October 14, 2023</h2>
+        <p class="modal-entry-type">Free Writing</p>
+        <div id="modal-entry-content">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/journal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

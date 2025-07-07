@@ -1,0 +1,20 @@
+/mental-health-companion
+├── index.html (Home/Dashboard)
+├── mood.html (Mood Tracking)
+├── journal.html (Journal & Gratitude)
+├── meditation.html (Meditation & Breathing)
+├── resources.html (Resources & Help)
+├── profile.html (User Profile)
+├── css/
+│   ├── style.css (Main styles)
+│   ├── dashboard.css (Dashboard specific)
+│   ├── mood.css (Mood tracking)
+│   └── meditation.css (Meditation specific)
+├── js/
+│   ├── main.js (Shared functionality)
+│   ├── mood.js (Mood tracking)
+│   ├── journal.js (Journal features)
+│   ├── meditation.js (Meditation timer)
+│   └── auth.js (User authentication)
+├── images/ (All website images)
+└── assets/ (Additional assets like icons)

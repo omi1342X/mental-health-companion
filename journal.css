@@ -1,0 +1,240 @@
+.journal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.journal-section {
+  margin-bottom: 2rem;
+}
+
+.journal-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.journal-tab {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.journal-tab.active {
+  color: var(--primary);
+}
+
+.journal-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.journal-tab-content {
+  display: none;
+}
+
+.journal-tab-content.active {
+  display: block;
+}
+
+.journal-date {
+  margin-bottom: 1rem;
+}
+
+.journal-date h3 {
+  color: var(--primary);
+}
+
+#journal-entry,
+#prompted-entry {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.journal-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.journal-prompt {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--gray-light);
+  border-radius: 5px;
+}
+
+.journal-prompt h3 {
+  margin-bottom: 0.5rem;
+}
+
+.gratitude-entries {
+  margin-bottom: 1.5rem;
+}
+
+.gratitude-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.gratitude-number {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: var(--primary);
+}
+
+.gratitude-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#past-gratitude {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.history-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.history-filters select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.entries-container {
+  margin-top: 1rem;
+}
+
+.journal-entry-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.entry-type {
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.entry-type.freeform {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.entry-type.prompted {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.entry-type.gratitude {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.entry-preview {
+  margin: 1rem 0;
+  color: var(--gray);
+}
+
+.entry-preview ul {
+  padding-left: 1.5rem;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btn-view {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.btn-delete {
+  background-color: var(--danger);
+  color: white;
+  padding: 0.3rem 0.5rem;
+}
+
+.sentiment-analysis {
+  margin-top: 2rem;
+}
+
+.sentiment-chart-container {
+  height: 200px;
+  margin: 1rem 0;
+}
+
+.sentiment-insights {
+  background-color: var(--gray-light);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.dark-mode .journal-tab {
+  color: #b0b0b0;
+}
+
+.dark-mode .journal-tab.active {
+  color: var(--primary-light);
+}
+
+.dark-mode .journal-prompt {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .journal-entry-card {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .entry-type.freeform {
+  background-color: #1e3a5f;
+  color: #64b5f6;
+}
+
+.dark-mode .entry-type.prompted {
+  background-color: #1b5e20;
+  color: #81c784;
+}
+
+.dark-mode .entry-type.gratitude {
+  background-color: #5d4037;
+  color: #ffb74d;
+}
